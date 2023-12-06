@@ -1,1 +1,6 @@
 bundle exec rake db:migrate 
+rails generate migration add_age_to_authors dob:date age:integer
+
+
+//routes
+bundle exec rake routes
