@@ -1,0 +1,21 @@
+<h1>Edit Student</h1>
+
+<%= form_for @student, :url => { :action => "update" } do |student_form| %>
+  <% if @student.errors.any? %>
+  <ul>
+    <% @student.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <%end%>
+
+
+
+  <%= student_form.label :first_name %> <br>
+  <%= student_form.text_field :first_name %> <br><br>
+  <%= student_form.label :last_name %> <br>
+  <%= student_form.text_field :last_name %> <br><br>
+  <%= student_form.label :email %> <br>
+  <%= student_form.email_field :email %> <br> <br>
+  <%= student_form.submit "Update" %>
+<% end %>
