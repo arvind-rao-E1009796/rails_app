@@ -22,4 +22,10 @@ class StudentsController < ApplicationController
             render :action => "new"
           end
     end
+
+    def show
+        @student = Student.find(params[:id]);
+        
+    end
+
 end
