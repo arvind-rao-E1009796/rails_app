@@ -14,3 +14,8 @@ student.save
     puts "createing student #{idx+1}"
     Student.create(first_name: "Student #{idx+1}", last_name: 'Kumar', email:"Student #{idx+1}@example.com")
 end
+
+Student.all.each do |student|
+    student.blogs.create(title: "Title #{student.id}" , content: "custom content 1 #{student.id}")
+    student.blogs.create(title: "Title #{student.id}" , content: "custom content 2 #{student.id}")
+end
