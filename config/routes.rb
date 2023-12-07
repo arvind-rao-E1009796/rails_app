@@ -1,4 +1,15 @@
 RailsApp::Application.routes.draw do
+  devise_for :users, controllers: { 
+      registrations: "users/registrations",
+      sessions: "users/sessions",
+      passwords: "users/passwords",
+      confirmations: "users/confirmations"
+  }
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   resources :courses
 
   root :to => "welcome#index"

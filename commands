@@ -4,3 +4,7 @@ rails generate migration add_age_to_authors dob:date age:integer
 
 //routes
 bundle exec rake routes
+
+
+//kill server
+kill -9 $(lsof -ti:3000)
