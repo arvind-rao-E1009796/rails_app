@@ -4,5 +4,10 @@
 <p><strong> Last Name: </strong> <%= @student.last_name %> </p>
 <p><strong> Email: </strong> <%= @student.email%> </p>
 
+
 <%= link_to "Back", students_path%>
-<%= link_to "Edit", edit_student_path(@student) %>
+<% if user_signed_in? and current_user.admin? %>
+    <%= link_to "Edit", edit_student_path(@student) %>
+<%else%>
+    <p>Only Admin can edit</p>
+<%end%>

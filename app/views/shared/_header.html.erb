@@ -24,7 +24,11 @@
         </li>
         <li class="navbar-brand">
            <% if user_signed_in? %>
-                <li><p><strong> Welcome  <%= current_user.user_name%> </strong> </p></li>
+                <% if current_user.admin? %>
+                  <li><p><strong> Welcome Admin: <%= current_user.user_name%> </strong> </p></li>
+                <% else %>
+                  <li><p><strong> Welcome User: <%= current_user.user_name%> </strong> </p></li>
+                <%end%>
             <% else %>
                 
             <% end %>
