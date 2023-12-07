@@ -29,7 +29,9 @@ gem 'libv8'
 gem 'therubyracer'
 gem 'test-unit' 
 
-gem 'devise', '< 3.2' 
+#gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+
+gem 'devise', '< 4.9' 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
