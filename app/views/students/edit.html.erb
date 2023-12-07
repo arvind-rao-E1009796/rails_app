@@ -10,12 +10,17 @@
   <%end%>
 
 
-
-  <%= student_form.label :first_name %> <br>
+<div class="mb-3">
+  <%= student_form.label :first_name%> <br>
   <%= student_form.text_field :first_name %> <br><br>
+</div>
+<div class="mb-3">
   <%= student_form.label :last_name %> <br>
   <%= student_form.text_field :last_name %> <br><br>
+</div>  
+<div class="mb-3">
   <%= student_form.label :email %> <br>
   <%= student_form.email_field :email %> <br> <br>
+</div>  
   <%= student_form.submit "Update" %>
 <% end %>
